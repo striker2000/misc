@@ -56,6 +56,9 @@ for row in history:
 		weight,
 	])
 
-table.set_field_align('Operation', 'l')
-table.set_field_align('Address', 'l')
-table.printt()
+if hasattr(table, 'align'):
+	table.align = 'l'
+else:
+	for field in table.fields:
+		table.set_field_align(field, 'l')
+print table.get_string()
