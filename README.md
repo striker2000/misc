@@ -20,8 +20,10 @@ vk-get-album.pl
 текущую директорию. Если доступ к альбому ограничен, нужно указать access token
 приложения, обладающего соответствующими правами.
 
-Использование:
+Для открытого альбома:
 
-    vk-get-album.pl http://vk.com/album1_0
+    vk-get-album.pl http://vk.com/album1_150695359
 
-    vk-get-album.pl --token abcdefg http://vk.com/album1_0
+Для альбома с ограниченным доступом:
+
+    vk-get-album.pl --token abcdefg http://vk.com/album1_150695359
