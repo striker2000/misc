@@ -8,12 +8,12 @@ import sys
 
 def barcode_type(s):
 	s = s.upper()
-	if not re.match('^[A-Z]{2}\d{9}[A-Z]{2}$', s):
+	if not re.match('^[A-Z]{2}\d{9}[A-Z]{2}$', s) and not re.match('^\d{14}$', s):
 		raise argparse.ArgumentTypeError('wrong barcode')
 	return s
 
 parser = argparse.ArgumentParser(description='Show tracking info from Russian Post service.')
-parser.add_argument('barcode', type=barcode_type, help='item barcode in international format')
+parser.add_argument('barcode', type=barcode_type, help='item barcode')
 args = parser.parse_args()
 
 try:
