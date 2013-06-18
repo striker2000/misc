@@ -54,7 +54,8 @@ if ( $res->is_success ) {
 	foreach my $photo ( @{ $data->{response} } ) {
 		my $url = $photo->{src_xxxbig}
 			// $photo->{src_xxbig}
-			// $photo->{src_xbig};
+			// $photo->{src_xbig}
+			// $photo->{src_big};
 		my $fn = sprintf '%d-%03d.jpg', $album_id, $cnt;
 
 		my $res = $ua->get( $url, ':content_file' => $fn );
