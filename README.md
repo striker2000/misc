@@ -27,3 +27,14 @@ vk-get-album.pl
 Для альбома с ограниченным доступом:
 
     vk-get-album.pl --token abcdefg http://vk.com/album1_150695359
+
+vk-sync-audio.pl
+----------------
+
+Скрипт для синхронизации аудиозаписей из альбома ВКонтакте с локальной директорией.
+Для использования нужно указать access token приложения, обладающего соответствующими
+правами.
+
+Использование:
+
+    vk-sync-audio.pl --token abcdefg http://vk.com/audios1 /home/username/music
