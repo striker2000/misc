@@ -16,7 +16,7 @@ GetOptions(
 my $album_url = $ARGV[0] or pod2usage();
 
 my ( $user_id, $album_id ) =
-	$album_url =~ /^http:\/\/vk\.com\/album(-?\d+)_(\d+)$/;
+	$album_url =~ /^https?:\/\/vk\.com\/album(-?\d+)_(\d+)$/;
 unless ( $user_id && $album_id ) {
 	pod2usage( 'Bad album URL' );
 }
